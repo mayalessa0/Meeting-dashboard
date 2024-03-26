@@ -1,0 +1,127 @@
+<!Doctype HTML>
+
+<html lang="ar">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+
+	<script src="scripts.js"></script>
+
+
+	<title>قائمة المهام</title>
+
+</head>
+
+<body>
+	<header>
+
+		 <!-- Logo -->
+	    <a href="#" class="logo">TMG</a>
+		<!-- Hamburger icon -->
+	    <input class="side-menu" type="checkbox" id="side-menu"/>
+	    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+		
+		<nav>
+			<img src="images/logo.png">
+			<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>   الرئيسية</a>
+			<a href="tasks.html"> <i class="fa fa-tasks" aria-hidden="true"></i>    قائمة المهام</a>
+			<a href="login.html"> <i class="fa fa-sign-in" aria-hidden="true"></i>  تسجيل دخول</a>
+		</nav>
+
+
+	</header>
+
+	<img src="images/header-img.jpeg">
+
+
+	<div class="task-container">
+	  <h2 class="task-title">قائمة المهام <small>من ٢٢ ديسمبر إلى ٢٢ يناير</small></h2>
+	  <ul class="responsive-table">
+	    <li class="table-header">
+	      <div class="col col-1">المهمة</div>
+	      <div class="col col-2">المسؤول</div>
+	      <div class="col col-3">الحالة</div>
+	      <div class="col col-4">رقم/ عنوان الاجتماع</div>
+	      <div class="col col-5">تحديث الحالة</div>
+	    </li>
+	    <li class="table-row">
+	      <div class="col col-1" data-label="المهمة">في حال كان العميل يملك صورة أشعة بانوراما في هاتفه، يرجى توجيهه إلى تجربة المريض لرفعها لملفه الطبي.</div>
+	      <div class="col col-2" data-label="المسؤول">د. معاذ</div>
+	      <div class="col col-3" data-label="الحالة">Done</div>
+	      <div class="col col-4" data-label="رقم/ عنوان الاجتماع"><a href="meeting_details.html">اجتماع دكتور معاذ / ١١٤ </a></div>
+	      <div class="col col-5" date-label="تحديث الحالة"><button onclick="openUpdateForm(14)" class="update-bt">تحديث</button></div>
+	    </li>
+	    <li class="table-row">
+	      <div class="col col-1" data-label="المهمة">في حال كان العميل يملك صورة أشعة بانوراما في هاتفه، يرجى توجيهه إلى تجربة المريض لرفعها لملفه الطبي.</div>
+	      <div class="col col-2" data-label="المسؤول">د. معاذ</div>
+	      <div class="col col-3" data-label="الحالة">Done</div>
+	      <div class="col col-4" data-label="رقم/ عنوان الاجتماع"><a href="meeting_details.html">اجتماع دكتور معاذ / ١١٤ </a></div>
+	      <div class="col col-5" date-label="تحديث الحالة"><button onclick="openUpdateForm(14)" class="update-bt">تحديث</button></div>
+	    </li>
+	    <li class="table-row">
+	      <div class="col col-1" data-label="المهمة">في حال كان العميل يملك صورة أشعة بانوراما في هاتفه، يرجى توجيهه إلى تجربة المريض لرفعها لملفه الطبي.</div>
+	      <div class="col col-2" data-label="المسؤول">د. معاذ</div>
+	      <div class="col col-3" data-label="الحالة">Done</div>
+	      <div class="col col-4" data-label="رقم/ عنوان الاجتماع"><a href="meeting_details.html">اجتماع دكتور معاذ / ١١٤ </a></div>
+	      <div class="col col-5" date-label="تحديث الحالة"><button onclick="openUpdateForm(14)" class="update-bt">تحديث</button></div>
+	    </li>
+	    <li class="table-row">
+	      <div class="col col-1" data-label="المهمة">في حال كان العميل يملك صورة أشعة بانوراما في هاتفه، يرجى توجيهه إلى تجربة المريض لرفعها لملفه الطبي.</div>
+	      <div class="col col-2" data-label="المسؤول">د. معاذ</div>
+	      <div class="col col-3" data-label="الحالة">Done</div>
+	      <div class="col col-4" data-label="رقم/ عنوان الاجتماع"><a href="meeting_details.html">اجتماع دكتور معاذ / ١١٤ </a></div>
+	      <div class="col col-5" date-label="تحديث الحالة"><button onclick="openUpdateForm(14)" class="update-bt">تحديث</button></div>
+	    </li>
+	  </ul>
+	</div>
+
+
+	<!-- create a popup form with CSS and JavaScript for update task status-->  
+	<div class="form-popup" id="updateForm">
+	  <form action="#" class="form-container" method="get">
+	    <h1 style="text-align: center;">تحديث</h1>
+
+	    <label for="status"><b>حالة المهمة</b></label>
+	    <select name="status" id="status">
+		    <option value="Pending">معلقة</option>
+		    <option value="Done">تمت</option>
+		    <option value="under progress">تحت التنفيذ</option>
+	  	</select>
+
+	    <label for="note"><b>ملاحظات المسؤول</b></label>
+	    <textarea id="note" name="w3review" rows="4" cols="50" placeholder="ادخل ملاحظاتك المرتبطة بتنفيذ المهمة"></textarea>
+
+	    <button type="submit" class="btn">حفظ</button>
+	    <button type="button" class="btn" onclick="closeUpdateForm()">اغلاق</button>
+	  </form>
+	</div>		
+	<footer>
+
+		<div class="footer-content">
+			<h3>مجموعة التخصيص الطبية</h3>
+	    <p>This page was created by May Mohammed Aless for Altakhases Medical Group.. all copyright is reserved.</p>
+			<ul class="socials">
+			   <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			   <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			   <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			   <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="footer-bottom">
+		   <p>copyright and design &copy;2024 <a href="https://www.linkedin.com/in/may-mohammed-alessa/">May Alessa</a>  </p>
+
+		</div>
+	</footer>	
+
+</body>
+</html>

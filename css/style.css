@@ -1,0 +1,612 @@
+
+ /* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* set font and background for all pages */
+body{
+    font-family: 'El Messiri', sans-serif;
+    background-color: #f0eae7;
+
+}
+
+/* header style for all page execpt login page*/
+header{
+    width: 100%;
+    max-height: 350px;
+    background: #dad8d7;
+    box-shadow: 1px 1px 5px 0px gray;
+    position: sticky; /*To keep the header at the top of the screen during scrolling*/
+    top: 0;
+}
+
+/* Logo in left up side*/
+.logo{
+    font-family: Bradley Hand, cursive;
+    display: inline-block;
+    color: #234340;
+    font-size: 35px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* nav style for all page execpt login page*/
+nav img{
+    display: block;
+    width: 20%;
+    margin: 5% 5% 0 0;
+}
+
+
+nav{
+    direction: rtl;
+    width: 100%;
+    height: 70%;
+    position: fixed;
+    top: 8%;
+    background: #2b574f;
+    overflow: hidden;
+    opacity: 90%;
+}
+
+nav a{
+    display: block;
+    padding: 4%;
+    color: white;
+    margin-right: 5%;
+}
+
+nav a:hover{
+    background-color: gray;
+}
+
+nav{
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+/* cover image*/
+img{
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 25px 20px;
+}
+
+/* Style label tag */
+.hamb-line {
+    background: #234340;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+} 
+
+/* Style span tag */
+.hamb-line::before,
+.hamb-line::after{
+    background: #234340;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} 
+
+
+
+/* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+h2, h4{
+    text-align: center;
+    
+}
+
+
+/* footer style */
+footer{
+
+    background: gray;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    font-family: serif;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+
+.socials a:hover{
+    color: #234340;
+    border-color: #234340;
+}
+
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.footer-bottom p{
+   float: left;
+   font-size: 14px;
+   word-spacing: 2px;
+   text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+/* for meeting page*/
+
+.meeting-container{
+    text-align: right;
+    padding: 10px;
+    margin: 5%;
+    border-style: groove;
+    border: 2px solid #607D8B;
+    border-radius: 10px;
+    width: 90%;;
+}
+
+.meeting-container:hover{
+    background-color: #D9DBCC;
+}
+
+
+/*for meeting details page*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 85%;
+  margin: 5%;
+  direction: rtl;
+}
+
+td, th {
+  border: 1px solid #234340;
+  text-align: right;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+.end_meeting{
+    direction: rtl;
+    margin: 0 10% 5%;
+}
+
+
+/* login page*/
+form {
+    background-color: #2b574f;
+    width: 90%;
+    margin: 0 5%;
+    padding: 0 5% 5%;
+
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #dad8d7;
+    color: #2b574f;
+    padding: 14px 20px;
+    margin: 5% 50% 0 5%;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 20px;
+    font-family: 'El Messiri', sans-serif;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    background-color: #2b574f;
+    padding: 14px 20px 0;
+    margin: 5% 5% 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.container-forgetpw{
+    background-color:#b1b6ab;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 5%;
+    margin: 0 5% 5%;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/*for taske list page*/
+.task-container {
+    direction: rtl;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.task-title {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+
+  .update-bt:hover {
+    background-color: white;
+
+  }
+
+  .col {
+    padding-right: 4%;
+    }
+  .col-1 {
+    flex-basis: 40%;
+  }
+  .col-2 {
+    flex-basis: 15%;
+  }
+  .col-3 {
+    flex-basis: 15%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  .col-5 {
+    flex-basis: 25%;
+  }
+  
+  .table-row:hover{
+    background-color: #D9DBCC;
+  }
+  .update-bt{
+    width: 70%;
+    margin: 0;
+    padding: 5%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+      
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+    .col-1{
+        border-bottom: 3px solid #f1f1f1;
+    }
+
+    .update-bt{
+    width: 40%;
+    padding: 2%;
+     }
+  }
+}
+
+
+/* update form for takse status */
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    left: 5%;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    margin: 0px;
+    width: 90%;
+    padding: 10px;
+    background-color: #2b574f;
+    opacity: 95%;
+    direction: rtl;
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;
+
+}
+
+/* Full-width input fields */
+.form-container textarea, .form-container select{
+    width: 90%;
+    background: #f1f1f1;
+    padding: 8px 20px;
+    margin: 15px 5%;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.form-container label {
+    color: #95A5A6;
+}
+
+/* When the inputs get focus, do something */
+.form-container textarea:focus, .form-container select:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    margin: 8%;
+    padding: 5px 20px;
+    width: 30%;
+    opacity: 0.8;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+/******************************/
+/* Responsiveness */
+@media (min-width: 768px){
+
+    .logo{
+        font-size: 40px;
+        position: absolute;
+        padding: .5% 0 0 1%;
+    }
+
+    nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        background-color: transparent;
+
+    }
+
+    nav a{
+        float: right;
+        display: inline-block;
+        margin: 0;
+        padding-top: 2%;
+        padding-bottom: 1%;
+        font-size:20px;
+    }
+    nav img{
+        display: none;
+    }
+    nav a:hover{
+        background-color: transparent;
+        color: grey;
+
+    }
+
+    .hamb{
+        display: none;
+    }
+
+    .meeting-container{
+        display: inline-block;
+        width: 28%;
+        text-align: right;
+        padding: 10px;
+        margin: 2%;
+        border-style: groove;
+        border: 2px solid #607D8B;
+        border-radius: 20px;  
+    }
+
+
+    .meeting-container:hover{
+        background-color: #D9DBCC;
+    }
+
+
+
+    .imgcontainer { 
+        grid-area: logoAMG;
+        background-color:transparent;
+        place-self: center;
+    }
+
+    .form { 
+        background-color:transparent;
+        grid-area: main; 
+        width:100%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        padding-top: 10%;
+    }
+    .container-forgetpw { 
+        background-color:transparent;
+        grid-area: formBottom;
+        width:100% ;
+        text-align: center;
+    }
+
+    .wide-container {
+        display: grid;
+        grid-template-areas:
+        'main logoAMG logoAMG'
+        'formBottom logoAMG logoAMG';
+        gap: 0;
+        margin: 10%;
+    }
+
+    .wide-container > div {
+      padding: 20px 0;
+    }
+
+    .login-title{
+        color: #234340;
+
+    }
+
+
+    .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 30%;
+    right: 30%;
+    left:30%;
+    z-index: 9;
+    }
+}
+
+
